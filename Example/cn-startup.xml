@@ -1,0 +1,58 @@
+<aiml version="2.0">
+
+<!-- 测试 AIML 语法 -->
+<category>
+    <pattern>LOAD AIML CN</pattern>
+    <template>
+        <learn>./corpus/AIMLs/cn-test.aiml</learn>
+    </template>
+</category>
+
+
+<!-- 测试 -->
+<category>
+    <pattern>LOAD AIML TEST</pattern>
+    <template>
+        <think><set name="PATH">./corpus/AIMLs/libs/</set></think>
+
+        <!--
+        <learn><get name="PATH"/>test.aiml</learn>
+        -->
+
+        <learn><get name="PATH"/>print_brain.aiml</learn>
+    </template>
+</category>
+
+<!-- 对话基本规则 -->
+<category>
+    <pattern>LOAD AIML MSG</pattern>
+    <template>
+        <think><set name="PATH">./corpus/AIMLs/msg/</set></think>
+
+        <learn><get name="PATH"/>daily.aiml</learn>
+        <learn><get name="PATH"/>hello_bye.aiml</learn>
+        <learn><get name="PATH"/>hobby.aiml</learn>
+        <learn><get name="PATH"/>no_answer.aiml</learn>
+        <learn><get name="PATH"/>recommend.aiml</learn>
+        <learn><get name="PATH"/>travel.aiml</learn>
+        <learn><get name="PATH"/>weather.aiml</learn>
+        <learn><get name="PATH"/>time.aiml</learn>
+        <learn><get name="PATH"/>dirty_lang.aiml</learn>
+        <learn><get name="PATH"/>Shopping guide1.aiml</learn>
+        <learn><get name="PATH"/>Shopping guide2.aiml</learn>
+
+        <!-- <learn><get name="PATH"/>cognition.aiml</learn> -->
+    </template>
+</category>
+
+<!-- 部分简单的任务型对话的规则实现 -->
+<category>
+    <pattern>LOAD AIML TASK</pattern>
+    <template>
+        <think><set name="PATH">./corpus/AIMLs/task_completion/</set></think>
+
+        <learn><get name="PATH"/>buy.aiml</learn>
+    </template>
+</category>
+
+</aiml>
